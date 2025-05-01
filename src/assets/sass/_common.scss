@@ -7,7 +7,31 @@ $pcw : 2732;
 $main : #FDE465;
 $txt : #3E4733;
 
-body{
+.bbd_logos{
     color: $txt;
     background: $main;
 }
+
+
+ 	
+.ja{
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.en{
+    font-family: sofia-pro-soft, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.topen{
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+

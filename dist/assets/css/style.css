@@ -253,6 +253,7 @@ legend {
    # ================================================================= */
 img {
   border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
+  width: 100%;
 }
 
 /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
@@ -286,8 +287,26 @@ a {
   text-decoration: none;
 }
 
-body {
+.bbd_logos {
   color: #3E4733;
   background: #FDE465;
+}
+
+.ja {
+  font-family: dnp-shuei-mgothic-std, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.en {
+  font-family: sofia-pro-soft, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.topen {
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 /*# sourceMappingURL=style.css.map */
