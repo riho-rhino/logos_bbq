@@ -1,0 +1,13 @@
+@use './_reset';
+@use './_mixin' as *;
+
+$spw : 750;
+$pcw : 2732;
+
+$main : #FDE465;
+$txt : #3E4733;
+
+body{
+    color: $txt;
+    background: $main;
+}
