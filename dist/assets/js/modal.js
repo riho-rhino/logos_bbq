@@ -1,0 +1,6 @@
+(()=>{"use strict";var o={d:(e,t)=>{for(var a in t)o.o(t,a)&&!o.o(e,a)&&Object.defineProperty(e,a,{enumerable:!0,get:t[a]})},o:(o,e)=>Object.prototype.hasOwnProperty.call(o,e),r:o=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(o,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(o,"__esModule",{value:!0})}},e={};
+/*!********************************!*\
+  !*** ./src/assets/js/modal.js ***!
+  \********************************/
+o.r(e),o.d(e,{default:()=>t});const t=function(){$(".lookmovie-wrap").click((function(){var o="https://www.youtube.com/embed/"+$(this).data("video-id")+"?autoplay=1",e=$(this).data("product-link");$(".bbq_modal-wrap").show(),$(".bbq-modal .youtube").html('<iframe src="'+o+'" frameborder="0" allowfullscreen></iframe>'),$(".bbq-modal .product-link").attr("href",e),setTimeout((function(){var o=$(".bbq-modal .youtube iframe")[0];o.src=o.src}),500)})),$(".bbq_modal-close").click((function(){$(".bbq_modal-wrap").hide(),$(".bbq-modal .youtube").html("")})),$(".bbq_modal-bg").click((function(){$(".bbq_modal-wrap").hide(),$(".bbq-modal .youtube").html("")}))}})();
+//# sourceMappingURL=modal.js.map

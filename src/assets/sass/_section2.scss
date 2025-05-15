@@ -1,3 +1,225 @@
 @use './_reset';
 @use './_mixin' as *;
 @use './_common' as c;
+
+.section_2{
+    padding-top: spCalc(17);   
+    @include pc{
+        padding-top: calc(36 / 750) * 100%;   
+    }
+}
+
+.sec_topitem2{
+    width: 60%;
+    margin: 0;
+    margin-right: -16.2%;
+    margin-top: -6.5%;
+}
+
+.sec2-1{
+    .sec2-txt1{
+        background: c.$txt;
+        color: c.$main;
+        width: sec(164);
+        border-radius: 5px;
+        text-align: center;
+        line-height: 1;
+        padding: sec(7.8) 0;
+        margin:0{
+            left: sec(25);
+            top: sec(23);
+        };
+        font-size: spFont(20);
+        @include pc{
+            font-size: min(pcFont(40),40px);
+            padding: pcSec(17) 0 pcSec(21);
+        }
+    }
+}
+
+.sec2-point_wrap{
+    position: relative;
+    padding: 12% 0 10.7%;
+    
+    .sec2-point_item{
+        position: absolute;
+        width: sec(152);
+        top: 0;
+        right: 0;
+        margin-right: sec(7);
+    }
+
+    .sec2-point_arrow{
+        width: sec(15);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin:0{
+            bottom: sec(-18);
+            left: sec(112);
+        }
+        line-height: 0;
+    }
+}
+
+
+// lineup
+.sec2_lineup1-wrap {
+    .sec2_lineup1 {
+        width: lineup(151);
+        margin-right: lineup(17);
+        margin-top: lineup(34);
+    }
+
+    .lineup-detail {
+        margin: lineup(20) 0 lineup(16);
+    }
+}
+
+.sec2_lineup2-wrap {
+    .sec2_lineup2 {
+        width: lineup(190);
+        margin-right: lineup(-17);
+        margin-top: lineup(51);
+    }
+
+    .lineup-detail {
+        margin: lineup(15
+        ) 0 lineup(16);
+    }
+}
+
+.sec2_lineup3-wrap {
+    .sec2_lineup3 {
+        width: lineup(166);
+        margin-right: lineup(5);
+        margin-top: lineup(49);
+    }
+
+    .lineup-detail {
+        margin: lineup(19) 0 lineup(18);
+    }
+}
+
+.sec2_lineup4-wrap {
+    .sec2_lineup4 {
+        width: lineup(137);
+        margin-right: lineup(-29);
+        margin-top: lineup(39);
+    }
+
+    .lineup-detail {
+        margin: lineup(19) 0 lineup(16);
+    }
+}
+
+.sec2_lineup5-wrap {
+    .sec2_lineup5 {
+        width: lineup(165);
+        margin-right: lineup(-35);
+        margin-top: lineup(39);
+    }
+
+    .lineup-detail {
+        margin: lineup(20) 0 lineup(16);
+    }
+}
+
+.sec2_lineup6-wrap {
+    .sec2_lineup6 {
+        width: lineup(134);
+        margin-right: lineup(-30);
+        margin-top: lineup(26);
+    }
+
+    .lineup-detail {
+        margin: lineup(20) 0 lineup(16);
+    }
+}
+
+.sec2_lineup7-wrap {
+    .sec2_lineup7 {
+        width: lineup(155);
+        margin-right: lineup(-28);
+        margin-top: lineup(40);
+    }
+
+    .lineup-detail {
+        margin: lineup(20) 0 lineup(16);
+    }
+}
+
+// lineup
+
+
+.exclusive-grill-wrap{
+    display: flex;
+    align-items: flex-start;
+    margin: sec(40) auto;
+    position: relative;
+    padding-bottom: sec(64);
+    .grill-text-wrap{
+        margin-left: sec(25);
+        margin-right: sec(21);
+    }
+}
+
+.grill-item{
+    position: relative;
+    .lookmovie-wrap{
+        bottom: 0;
+        left: 0;
+    }
+    &.grill-item1{
+        width: calc(225 / 205) * 100%;
+        .lookmovie-wrap{
+            margin-bottom: calc(28 / 225) * 100%;
+        }
+    }
+    &.grill-item2{
+        width: calc(139 / 205) * 100%;
+        margin-top: calc(5 / 205) * 100%;
+        margin-left: calc(41 / 205) * 100%;
+        .lookmovie-wrap{
+            margin-bottom: calc(-17 / 139) * 100%;
+            margin-left: calc(-38 / 139) * 100%;
+        }
+    }
+}
+
+
+.grill-check{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0!important;
+}
+
+
+.plus-item_wrap2{
+    display: flex;
+    width: sec(286);
+    margin: sec(16) auto 7%;
+    justify-content: space-between;
+    .plus-txt{
+        width: calc(122 / 286) * 100%;
+        margin: 0!important;
+        letter-spacing: 0.05em;
+    }
+
+    .sec2-plus-item{
+        width: calc(142 / 286) * 100%;
+        .lookmovie-wrap{
+            right: 0;
+            margin-bottom: 4%;
+            margin-right: -2%;
+        }
+    }
+}
+.plus-wrap2{
+    margin-top: sec(25);
+}
+.sec2-plus_check{
+    width: calc(92 / 122) * 100%!important;
+}

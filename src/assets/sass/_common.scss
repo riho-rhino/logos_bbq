@@ -1,15 +1,57 @@
 @use './_reset';
 @use './_mixin' as *;
 
-$spw : 750;
-$pcw : 2732;
+$spw : 375;
+$pcw : 1920;
+$sec : 335;
 
 $main : #FDE465;
 $txt : #3E4733;
+$bg : #FCFFD5;
+$tag : #3E4733;
 
-.bbd_logos{
+.bbq_logos{
     color: $txt;
-    background: $main;
+    background-color: $main;
+    font-family: dnp-shuei-mgothic-std, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    
+    a {
+        text-decoration: none!important;
+      }
+      .bbq_logos-inner{
+        width: 100%;
+        background-image:  url(/assets/img/bg.png);
+        background-size: cover;
+        overflow: hidden;
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     // width: pcCalc(750);
+        //     // max-width: 750px;
+        //     height: 100%;
+        //     background: url(/assets/img/_sp.jpg) no-repeat 0 0 / contain;
+        //     // background: url(/assets/img/_pc.jpg) no-repeat 0 0 / contain;
+        //     background-size: 100%;
+        //     pointer-events: none;
+        //     opacity: 0.3;
+        //     z-index: 1000;
+        //   }
+        @include pc{
+            background-size: contain;
+            background-repeat: repeat;
+            position: relative;
+            border: solid 1px $txt{
+                bottom: 0;
+                top: 0;
+            };
+            
+        }
+      }
 }
 
 
@@ -34,4 +76,32 @@ $txt : #3E4733;
 }
 
 
+
+
+#special-content{
+    padding: 0!important;
+    width: 100%!important;
+    max-width: none !important;
+  }
+  
+  
+  
+  @include pc{
+    .feature_details01 .box {
+        margin-top: 0rem!important;
+    }
+    .feature_details01 {
+      padding-bottom: 0 !important;
+  }
+  }
+  
+  @include sp{
+    .container, .s_container, .ss_container {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}   
+  
 

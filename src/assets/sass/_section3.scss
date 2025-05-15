@@ -1,3 +1,210 @@
 @use './_reset';
 @use './_mixin' as *;
 @use './_common' as c;
+
+.section_3{
+    padding-top: spCalc(22);   
+    .sec_top-flex{
+        h2{
+            white-space: nowrap;
+            margin-top: sec(5);
+        }
+    }
+    .sec_topitem3{
+        width: calc(99 / 285) * 100%;
+        margin: 0{
+            right: sec(-5);
+            top: sec(-11)
+        };
+    }
+}
+
+
+.exclusive-plate-wrap{
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+    margin: sec(29) sec(-20) 0 auto;
+    position: relative;
+    
+    .plate-item{
+        width: sec(194);
+    }
+    .lookmovie-wrap{
+        position: absolute;
+        bottom: 4.4%;
+        right: 0;
+        margin-right: sec(90);
+    }
+    
+    
+}
+
+.plate-text-wrap{
+    display: flex;
+    gap: 6px;
+    .plate-text{
+        width: 38px;
+        border-radius: 5px;
+        background: c.$txt;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: center;
+        padding: 8px 10px;
+        height: fit-content;
+        color: c.$main;
+        p{
+            font-size: spFont(20);
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        
+        }
+        @include pc{
+            padding: 11px 10px;
+            width: 58px;
+            p{
+                font-size: pcFont(40);
+            }
+        }
+    }
+}
+
+.plate-explanation{
+    font-size: spFont(12);
+    line-height: calc(22 / 12);
+    width: sec(285);
+    margin: sec(20) auto 0;
+    @include pc{
+        font-size: pcFont(24);
+    }
+}
+
+
+
+// lineup
+.sec3_lineup1-wrap {
+    .sec3_lineup1 {
+        width: lineup(130);
+        margin-top: lineup(16);
+    }
+
+    .lineup-detail {
+        margin: lineup(18) 0 lineup(16);
+    }
+}
+
+.sec3_lineup2-flex{
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    padding-bottom: sec(44);
+    position: relative;
+}
+.sec3_lineup2-wrap {
+    width: sec(167)!important;
+    margin: 0 sec(24) 0 sec(29)!important;
+    .lineup-detail {
+        width: 100%;
+        margin: calc(20 / 167) * 100% 0 calc(16 / 167) * 100%;
+        @include pc{
+            .lineup-check{
+                width: calc(184 / 334) * 100%!important;
+            }
+        }
+    }
+}
+.sec3_lineup2 {
+    position: absolute;
+    width: sec(160);
+    right: 0;
+    bottom: 0;
+    margin-right: sec(16);
+}
+
+
+
+// lineup
+
+.plus-wrap3{
+    margin-top: sec(52);
+    .plus-txt{
+        margin-top: sec(20);
+    }
+}
+
+.sec3-seat{
+    position: relative;
+    width: sec(258);
+    margin: 0 auto sec(38);
+    padding-top: sec(48);
+    .seat-item{
+        position: relative;
+        z-index: 15;
+    }
+    .seat-detail{
+        position: absolute;
+        width: calc(80 / 258) * 100%;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        margin-right: calc(-19 / 258) * 100%;
+        margin-top: calc(6 / 258) * 100%;
+    }
+    .lookmovie-wrap{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 20;
+        margin-bottom: calc(-13 / 258) * 100%;
+        margin-left: calc(-15 / 258) * 100%;
+    }
+}
+
+.section_3{
+    .plus-item-ttl{
+        &:nth-of-type(2),
+        &:nth-of-type(3){
+            @include pc{
+                margin: 10px auto 0!important;
+            }
+        }
+    }
+}
+
+.seat-detail{
+    width: sec(80);
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right:sec(41) ;
+    z-index: 1;
+}
+
+
+.sec3_lineup3-wrap {
+    margin: 0 auto lineup(15);
+    .sec3_lineup3 {
+        width: lineup(190);
+        margin-right: lineup(-10);
+        margin-top: lineup(36);
+    }
+    .lineup-detail {
+        margin: lineup(16) 0 lineup(18);
+    }
+}
+
+.sec3_lineup4-wrap {
+    margin-bottom: sec(50)!important;
+    .sec3_lineup4 {
+        width: lineup(222);
+        margin-right: lineup(-42);
+        margin-top: lineup(25);
+    }
+    .lineup-detail {
+        margin: lineup(18) 0 lineup(18);
+    }
+}
+
+
+

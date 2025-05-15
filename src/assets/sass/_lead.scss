@@ -1,3 +1,86 @@
 @use './_reset';
 @use './_mixin' as *;
 @use './_common' as c;
+
+
+
+.top_wrap{
+    background-color: c.$main;
+    margin-top: calc(10 / c.$spw) * 100%;
+    padding-bottom: calc(30 / c.$spw) * 100%;
+    @include pc{
+        margin-top: 0;
+    }
+}
+
+.bbd_lead{
+    line-height: calc(24 / 12);
+    text-align: center;
+    padding-top: calc(21 / c.$spw) * 100%;
+    font-size: spFont(12);
+    @include pc{
+        font-size: pcFont(24);
+        padding-top: calc(56 / 750) * 100%;
+    }   
+}
+
+
+.sp-anchor{
+    display: flex;
+    width: calc(335 / c.$spw) * 100%;
+    margin: calc(14 / c.$spw) * 100% auto 0;
+    background: #fff;
+    border: solid 1px #000;
+    border-radius: 15px;
+    
+    .anchor{
+        .anchor_img{
+            line-height: 0;
+        }
+        .anchor_txt{
+            text-align: center;
+            line-height: calc(16 / 12);
+            font-size: spFont(12);
+
+        }
+        .anchor_arrow{
+            display: flex;
+            width: 14px;
+            margin: calc(12 / 112) * 100% auto;
+            height: 7px;
+        }
+    }
+
+    @include pc{
+        display: none;
+    }
+}
+
+.anchor_1{
+    width: 33%;
+    .anchor_img{
+        width: calc(28 / 112) * 100%;
+        margin: 0 auto;
+        padding: calc(18 / 112) * 100% 0 calc(11 / 112) * 100%;
+    }
+}
+
+.anchor_2{
+    width: 33.5%;
+    border-left: dotted 2px #000;
+    .anchor_img{
+        width: calc(66 / 112) * 100%;
+        margin: 0 auto ;
+        padding: calc(15 / 112) * 100% 0 calc(9 / 112) * 100%;
+    }
+}
+
+.anchor_3{
+    width: 33.5%;
+    border-left: dotted 2px #000;
+    .anchor_img{
+        width: calc(36 / 112) * 100%;
+        margin: 0 auto ;
+        padding: calc(13 / 112) * 100% 0 calc(9 / 112) * 100%;
+    }
+}

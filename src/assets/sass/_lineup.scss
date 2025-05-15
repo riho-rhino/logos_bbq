@@ -1,0 +1,176 @@
+@use './_reset';
+@use './_mixin' as *;
+@use './_common' as c;
+
+
+.lineup-wrap {
+    border: solid 1px c.$txt {
+        left: solid 0.5px c.$txt;
+        right: solid 0.5px c.$txt;
+    };
+    background: #fff;
+    border-radius: 165px;
+
+    @include pc {
+        border-radius: 330px;
+    }
+
+    h3 {
+        text-align: center;
+        line-height: 1;
+        font-weight: bold;
+        font-size: spFont(32);
+        margin-top: sec(67);
+        @include pc {
+            font-size: pcFont(64);
+        }
+    }
+}
+
+.sec1-lineup-wrap {
+    padding-bottom: spCalc(75);
+    h3 {
+        margin-bottom: sec(27);
+    }
+    .lineup{
+        margin: 0 auto sec(39);
+    }
+}
+
+.sec2-lineup-wrap {
+    padding-bottom: spCalc(115);
+    margin-top: 4%;
+    h3 {
+        margin-top: 18.5%;
+        margin-bottom: sec(32);
+    }
+    .lineup{
+        margin: 0 auto sec(32);
+    }
+    @include pc {
+        margin-top: 5%;
+    }
+    .lineup-detail {
+        .lineup-price {
+            margin: lineup(4) 0 4.5%;
+        }
+    }
+}
+
+.sec3-lineup-wrap {
+    padding-bottom: sec(55);
+    margin-top: sec(42);
+    .lineup{
+        margin: 0 auto sec(27);
+    }
+    h3 {
+        margin-top: 18%;
+        margin-bottom: sec(35);
+    }
+}
+
+.lineup {
+    position: relative;
+    display: flex;
+    width: sec(285);
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    &:last-of-type {
+        margin: 0 auto;
+    }
+    
+    &::after,
+    &::before {
+        content: "";
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+    &::after {
+        top: 0;
+        border-top: dotted 1.5px c.$txt;
+    }
+
+    &::before {
+        bottom: 0;
+        border-bottom: dotted 1.5px c.$txt;
+    }
+    .liup-itemph {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 15;
+    }
+}
+
+
+
+.lineup-detail {
+    width: 50%;
+    .lineup-name {
+        white-space: nowrap;
+        font-size: spFont(14);
+        line-height: calc(19 / 14);
+    }
+    .lineup-price {
+        font-size: spFont(16);
+        line-height: 1;
+        margin: lineup(5) 0 lineup(18);
+    }
+    @include pc {
+        
+        .lineup-name {
+            font-size: pcFont(28);
+        }
+
+        .lineup-price {
+            font-size: pcFont(32);
+        }
+    }
+}
+
+.vertical-txt-wrap{
+    display: flex;
+    width: sec(83);
+    justify-content: space-between;
+    .vertical-txt{
+        width: 45.7%;
+        border-radius: 5px;
+        background: c.$main;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: center;
+        padding: 9px 14px;
+        height: fit-content;
+        p{
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: spFont(20);
+            letter-spacing: 0.01em;
+        }
+        @include pc{
+            padding: 18px 28px;
+            width: 58px;
+            p{
+                font-size: pcFont(40);
+            }
+        }  
+    }
+}
+
+.package {
+    width: lineup(67);
+    line-height: 1;
+    position: relative;
+    z-index: 10;
+    .package_txt{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+

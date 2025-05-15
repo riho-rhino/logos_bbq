@@ -1,0 +1,47 @@
+@use './_reset';
+@use './_mixin' as *;
+@use './_common' as c;
+
+.bbq_left{
+    position: sticky;
+    top: 0;
+    right: 0;
+    top: 77px;
+    height: calc(100vh - 77px);
+    display: none;
+    @include pc{
+        display: block;
+    }
+}
+
+.pc-anchor-inner{
+    position: relative;
+    width: calc(136 / 270) * 100%;
+    margin: calc(201 / 270) * 100% 0 0 auto;
+    background: #fff;
+    border-radius: 15px 0 0 15px;
+    border: solid 1px c.$txt{
+        right: 0; 
+    };
+}
+.pc-anchor{
+    .pc-anchor_txt{
+        font-size: pcFont(15);
+        line-height: calc(20 / 15);
+        text-align: center;
+        margin-bottom: calc(12 / 136) * 100%;
+    }
+    &:nth-of-type(2){
+        padding: 1px 0;
+        border: dotted 1px c.$txt{
+            left: 0;
+            right: 0;
+        };
+    }
+}
+
+.pc-anchor_arrow{
+    width: 16px;
+    margin: 0 auto calc(19 / 136) * 100%;
+    line-height: 0;
+}

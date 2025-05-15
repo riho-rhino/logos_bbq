@@ -1,0 +1,79 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.bbq_modal-wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  
+  .bbq_modal-inner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  .bbq_modal-bg{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background: #fde4658c;
+    position: absolute;
+
+  }
+  .bbq_modal-close{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 8px;
+    margin-bottom: 4rem;
+   
+    .close_btn{
+      width: 9px;
+      line-height: 0;
+    }
+    .close{
+      font-size: spFont(16);
+      line-height: 1;
+    }
+  }
+}
+
+.bbq-modal{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.youtube iframe{
+  background: #fff;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.item_detail{
+  margin: spCalc(23) auto 0;
+  width: spCalc(104);
+  opacity: 1;
+  transition: opacity .3s ease;
+  &:hover{
+    opacity: .6;
+  }
+  a{
+    border-radius: 15px;
+    display: block;
+    color: c.$main;
+    font-size: spFont(12);
+    text-align: center;
+    line-height: 1;
+    padding: calc(8 / 104) * 100% 0;
+    background: c.$txt;
+  }
+}

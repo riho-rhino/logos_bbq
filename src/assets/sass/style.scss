@@ -8,4 +8,9 @@
 @use './_section2';
 @use './_section3';
 @use './_footer';
-// @use './_modules/_main1allitem';
+@use './_parts';
+@use './_pc';
+@use './_right';
+@use './_left';
+@use './_lineup';
+@use './_modules/_modal';

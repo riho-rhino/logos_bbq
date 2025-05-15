@@ -1,3 +1,4 @@
-import hellow from "./_modules/_test"
+import $ from "jquery"
+import modal from "./modal"
+modal()
 
-hellow()

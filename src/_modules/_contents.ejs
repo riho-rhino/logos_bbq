@@ -1,10 +1,23 @@
-<img src="<%= rootURL %>" alt="">
-<div class="bbd_logos">
-    <%- include('./_top.ejs') %>
-    <%- include('./_lead.ejs') %>
-    <%- include('./_section1.ejs') %>
-    <%- include('./_section2.ejs') %>
-    <%- include('./_section3.ejs') %>
+
+<div class="bbq_logos">
+    <div class="bbq_left">
+        <%- include('./_left.ejs') %>
+    </div>
+    <div class="bbq_logos-inner">
+        <%- include('./_mv.ejs') %>
+        <%- include('./_lead.ejs') %>
+        <%- include('./_section1.ejs') %>
+        <%- include('./_section2.ejs') %>
+        <%- include('./_section3.ejs') %>
+    </div>
+    <div class="bbq_right">
+        <%- include('./_right.ejs') %>
+    </div>
+    <div class="bbq_modal-wrap modal_show">
+        <%- include('./_modal.ejs') %>
+
+    </div>
 </div>
+
 
 <script src="<%= rootURL %>/assets/js/index.js"></script>

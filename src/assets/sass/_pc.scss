@@ -1,0 +1,24 @@
+@use './_reset';
+@use './_mixin' as *;
+@use './_common' as c;
+
+.bbq_logos{
+    @include pc{
+        // display: grid;
+        // align-items: start;
+        // grid-template-columns: pcCalc(270) pcCalc(750) pcCalc(900);
+        display: flex;
+        align-items: flex-start;
+        position: relative; 
+        .bbq_left{
+            width: pcCalc(270);
+        }
+        .bbq_logos-inner{
+            width: pcCalc(750);
+            max-width: 750px;
+        }
+        .bbq_right{
+            width: pcCalc(900);
+        }
+    }
+}
