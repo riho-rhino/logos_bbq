@@ -18,6 +18,12 @@
     text-align: center;
     padding-top: calc(21 / c.$spw) * 100%;
     font-size: spFont(12);
+    &.start{
+        @include pc{
+            opacity: 1!important;
+            transform: translateY(0)!important;
+        }
+    }
     @include pc{
         font-size: pcFont(24);
         padding-top: calc(56 / 750) * 100%;

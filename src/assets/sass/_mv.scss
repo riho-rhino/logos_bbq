@@ -8,11 +8,26 @@ $mv : 365;
 .bbq_mv{
     position: relative;
     width: spCalc(362);
-    // width: calc(362 / c.$spw) * 100%;
     margin: 0 0 0 auto;
     display: block;
     @include pc{
         display: none;
+    }
+    &.start{
+        .mv_egg{
+            transform: translate(0,0);
+        }
+        .mv_txt1,
+        .mv_txt2,
+        .mv_txt3{
+            clip-path: inset(0);
+        }
+        .mv_people,.mv_1,.mv_4,.mv_5,.mv_7,.mv_9,.mv_11{
+            animation: yurayura_3 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
+        .mv_2,.mv_3,.mv_6,.mv_8,.mv_10,.mv_12{
+            animation: yurayura_2 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        }
     }
 }
 .mv-item{
@@ -23,6 +38,8 @@ $mv : 365;
     width: calc(157.81 / $mv) * 100%;
     top: 0;
     right: 0;
+    transform: translate(120px, -110px);
+    transition: transform 2s ease;
 }
 
 .mv_people{
@@ -40,6 +57,7 @@ $mv : 365;
     left: 0;
     margin-top: calc(33 / $mv) * 100%;
     margin-left: calc(20 / $mv) * 100%;
+    
 }
 .mv_2{
     width: calc(175 / $mv) * 100%;
@@ -127,6 +145,8 @@ $mv : 365;
     margin-bottom: calc(121 / $mv) * 100%;
     margin-left: calc(15 / $mv) * 100%;
     z-index: 11;
+    clip-path: inset(0 0 100% 0);
+    transition: all .6s ease .5s;
 }
 .mv_txt2{
     width: calc(99 / $mv) * 100%;
@@ -135,6 +155,8 @@ $mv : 365;
     margin-bottom: calc(121 / $mv) * 100%;
     margin-left: calc(84 / $mv) * 100%;
     z-index: 90;
+    clip-path: inset(0 100% 0 0);
+    transition: all .6s ease .9s;
 }
 .mv_txt3{
     width: 30%;
@@ -142,4 +164,8 @@ $mv : 365;
     right: 0;
     margin-top: 28.027397%;
     margin-right: 11%;
+    clip-path: inset(0 0 100% 0);
+    transition: all .6s ease;
 }
+
+

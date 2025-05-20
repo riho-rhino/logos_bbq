@@ -32,6 +32,9 @@
 @function right($value){
   @return calc($value / 478) * 100%;
 }
+@function op($value){
+  @return calc($value / 209) * 100%;
+}
 
 // fontsize
 

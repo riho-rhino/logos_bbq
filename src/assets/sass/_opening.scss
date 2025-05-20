@@ -1,0 +1,218 @@
+
+@use './_reset';
+@use './_mixin' as *;
+@use './_common' as c;
+
+
+
+.bbq-op{
+    width: 100%;
+    height: 100vh;
+    background: #3E4733;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    .op-inner{
+        position: relative;
+        width: spCalc(209);
+        padding-top: spCalc(274.8);
+        height: 0;
+        margin:spCalc(185) auto 0;
+        @include pc{
+            width: pcCalc(356);
+            padding-top: pcCalc(449.5);
+            margin:pcCalc(300) auto 0;
+        }
+    }   
+}
+
+
+
+.op_people{
+    position: absolute;
+    width: op(120.17);
+    top: 0;
+    right: 0;
+    margin-top: op(64.8);
+    margin-right: op(55.8);
+    img{
+        animation: yurayura_1 2.5s linear infinite;
+    }
+    
+}
+
+.bbq-op{
+    .op_ph{
+        position: absolute;
+        transform: translateY(30px);
+        opacity: 0;
+        transition: transform 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s linear;
+    }
+    &.show{
+        .op_ph{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        .op_logos{
+            .op_letter{
+                animation-name: lePeek;
+                animation-duration: 1.5s;
+                animation-fill-mode: both;
+                animation-iteration-count:2;
+            }
+            
+        }
+    }
+
+
+    .op_logos{
+        color: c.$main;
+        letter-spacing: 0.05em;
+        line-height: 1;
+        text-align: center;
+        font-size: spFont(20.7);
+        margin-top: spCalc(11);
+        @include pc{
+            font-size: pcFont(32);
+            margin-top: pcCalc(16.5);
+        }
+        .op_letter{
+            font-family: neue-haas-grotesk-text, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            display: inline-block;
+            transform: rotateX(0) translateY(0) rotate(0); 
+        }
+        @for $value from 1 through 9 {
+            .op_logos_#{$value} {
+                animation-delay: 0.1s * $value;
+            }
+        }
+    }
+
+    
+    
+    .op_egg{
+        width: op(91.49);
+        top: 0;
+        right: 0;
+        margin-top: op(25.79);
+        z-index: 20;
+        
+    }
+
+    .op_1{
+        width: op(104.86);
+        top: 0;
+        right: 0;
+        margin-right: op(37);    
+        z-index: 15;
+        transition-delay: 0.2s;
+
+    }
+
+    .op_2{
+        width: op(94.68);
+        top: 0;
+        left: 0;
+        margin-top: op(41.5);
+        margin-left: op(14);    
+        z-index: 20;
+        transition-delay: 0.4s;
+    }
+
+    .op_3{
+        width: op(21.58);
+        top: 0;
+        left: 0;
+        margin-top: op(83);
+        margin-left: op(14);    
+        transition-delay: 0.6s;
+    }
+
+    .op_4{
+        width: op(46.55);
+        top: 0;
+        left: 0;
+        margin-top: op(92);
+        margin-left: op(21.7);    
+        transition-delay: 0.8s;
+    }
+
+    .op_5{
+        width: op(36.35);
+        bottom: 0;
+        left: 0;
+        margin-bottom: op(78.6);
+        margin-left: op(9);    
+        transition-delay: 1s;
+    }
+
+    .op_6{
+        width: op(64.99);
+        bottom: 0;
+        left: 0;
+        margin-bottom: op(18);
+        transition-delay: 1.2s;
+    }
+
+    .op_7{
+        width: op(40.61);
+        bottom: 0;
+        left: 0;
+        margin-bottom: op(51.7);    
+        margin-left: op(53);    
+        transition-delay: 1.4s;
+    }
+    .op_8{
+        width: op(91.59);
+        bottom: 0;
+        left: 0;
+        margin-left: op(61);    
+        transition-delay: 1.6s;
+    }
+    .op_9{
+        width: op(37.9);
+        bottom: 0;
+        right: 0;
+        margin-bottom: op(5);
+        margin-right: op(26);    
+        transition-delay: 0.8s;
+    }
+    .op_10{
+        width: op(35.64);
+        bottom: 0;
+        right: 0;
+        margin-bottom: op(43);
+        margin-right: op(21);    
+        z-index: 15;
+        transition-delay: 1.2s;
+    }
+    .op_11{
+        width: op(24.17);
+        bottom: 0;
+        right: 0;
+        margin-bottom: op(84);
+        margin-right: op(42);    
+        z-index: 10;
+        @include pc{
+            margin-bottom: calc(124.4 / 355.9) * 100%;
+        }
+        
+    }
+    .op_12{
+        width: op(45);
+        top: 0;
+        right: 0;
+        margin-top: op(104);
+        margin-right: op(24);    
+        transition-delay: 0.3s;
+    }
+
+    
+
+}
+
+

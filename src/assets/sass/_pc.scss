@@ -4,9 +4,6 @@
 
 .bbq_logos{
     @include pc{
-        // display: grid;
-        // align-items: start;
-        // grid-template-columns: pcCalc(270) pcCalc(750) pcCalc(900);
         display: flex;
         align-items: flex-start;
         position: relative; 

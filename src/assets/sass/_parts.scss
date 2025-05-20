@@ -34,7 +34,15 @@
     }   
 }
 
-
+.sec_topitem{
+    transform: translateX(30px);
+    opacity: 0;
+    transition: all .8s .3s ease;
+    &.active{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 
 
 .section_inner{
@@ -190,31 +198,53 @@
         
     }
 }
-
-.plus-item-ttl{
-    position: relative;
-    line-height: 1;
-    text-align: center;
-    width: fit-content;
-    margin: 0 auto;
-    padding-bottom: 2.8%;
-    font-size: spFont(20);
-    @include pc{
-        font-size: pcFont(40);
-    }   
-    &:nth-of-type(2),
-    &:nth-of-type(3){
-        margin: 8px auto 0;
+.plus-wrap{
+    &.active{
+        .plus-item-ttl{
+            opacity: 1;
+            .wave{
+                clip-path: inset(0);
+            }
+        }
     }
-    .wave{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        line-height: 0;
-    }   
+    .plus-item-ttl{
+        position: relative;
+        line-height: 1;
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        padding-bottom: 2.8%;
+        font-size: spFont(20);
+        opacity: 0;
+        transition: opacity 0.8s ease;
+        @include pc{
+            font-size: pcFont(40);
+        }   
+        &:nth-of-type(2),
+        &:nth-of-type(3){
+            margin: 8px auto 0;
+        }
+        .wave{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            line-height: 0;
+            clip-path: inset(0 100% 0 0);
+            transition: all .5s ease;
+        }   
+        .wave_1{
+            transition-delay: .3s;
+        }
+        .wave_2,.wave_4{
+            transition-delay: .5s;
+        }
+        .wave_5{
+            transition-delay: .7s;
+        }
+        
+    }
 }
-
 .plus-txt{
     width: sec(285);
     line-height: calc(22 / 12);
@@ -230,6 +260,7 @@
         top: sec(12);
     };
 }
+
 .plus-item{
     position: relative;
     &.sec1-plus-item{
@@ -249,8 +280,14 @@
 
 
 .lookmovie-wrap{
+    cursor: pointer;
     position: absolute;
     bottom: 0;
+    transform: scale(0,0);
+    transition: transform .4s cubic-bezier(0.39, 0.575, 0.565, 1);
+    &.in{
+        transform: scale(1,1);
+    }
 }
 .look-movie{
     width: 70px;
@@ -312,7 +349,13 @@
     width: spCalc(265);
     margin: 0 auto;
     padding: spCalc(42) 0 spCalc(164);
-    
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s linear;
+    &.active{
+        opacity: 1;
+        transform: translateY(0);
+    }
     a{
         border-radius: 40px;
         width: 100%;
